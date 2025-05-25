@@ -19,12 +19,19 @@ app.get("/api/servers", (req, res) => {
 // Добавить сервер
 app.post("/api/servers", (req, res) => {
   const newServer = req.body;
+
+  // Генерируем ID
+  newServer.id = Date.now();
+
+  // Если игроков нет, делаем 0
+  newServer.players = newServer.players || 0;
+
   const data = fs.readFileSync(DB_FILE);
   const db = JSON.parse(data);
 
-  newServer.id = Date.now(); // уникальный ID
   db.servers.push(newServer);
   fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2));
+
   res.status(201).json(newServer);
 });
 
