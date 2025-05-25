@@ -1,0 +1,26 @@
+{
+  "servers": [
+    {
+      "id": 1,
+      "name": "Hypixel",
+      "ip": "play.vogic.pro",
+      "status": "online",
+      "type": "Мини-игры",
+      "version": "1.20.1",
+      "description": "Крупнейший сервер с мини-играми.",
+      "maxPlayers": 4500,
+      "players": 3285
+    },
+    {
+      "id": 2,
+      "name": "CubeCraft Games",
+      "ip": "play.vogic.pro",
+      "status": "online",
+      "type": "Мини-игры",
+      "version": "1.19.4",
+      "description": "Мини-игры вроде EggWars и Tower Defense.",
+      "maxPlayers": 3000,
+      "players": 2010
+    }
+  ]
+}
